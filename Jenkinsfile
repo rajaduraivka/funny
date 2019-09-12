@@ -12,6 +12,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                mvn sonar:sonar \
+  -Dsonar.projectKey=devaraj \
+  -Dsonar.organization=devraj \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=81e8f98c0e5268714442ffbacba9cd5ae739097b
             }
         }
         stage('Deploy') {
