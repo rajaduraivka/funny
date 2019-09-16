@@ -21,10 +21,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stage('Test'){
+        stage('Compile'){
             steps{
-                echo 'Testing..'
+                echo 'Compile..'
             }
         }
     }
-
+}
